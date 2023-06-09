@@ -37,7 +37,7 @@ def check_api(config: Mapping[str, Any]) -> str:
 
 
 @click.command()
-@click.argument('config_file', type=click.File)
+@click.argument('config_file', type=click.File())
 def main(config_file):
     config = yaml.safe_load(config_file)
 
