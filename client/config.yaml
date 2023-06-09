@@ -1,0 +1,7 @@
+CHECK_INTERVAL: 5
+CHECK_TIMEOUT: 5
+API_URL: "http://localhost:8080/getcome"
+UNAVAILABLE_MESSAGE: "Не могу достучаться до интернета. Не знаю, придёт ли сегодня Тамерлан :("
+UNKNOWN_MESSAGE: "Тамерлан ещё сам не понял, придёт ли он сегодня"
+WONT_COME_MESSAGE: "Тамерлан сегодня не придёт. Место свободно"
+WILL_COME_MESSAGE: "Тамерлан сегодня придёт {when}"

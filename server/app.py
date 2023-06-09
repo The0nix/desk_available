@@ -1,9 +1,7 @@
 from datetime import datetime
-from typing import Annotated
 
 from fastapi import FastAPI, Request, Form, status
 from fastapi.responses import HTMLResponse
-from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import RedirectResponse
 
@@ -21,10 +19,10 @@ async def admin(request: Request):
     return templates.TemplateResponse('admin.html', {'request': request})
 
 @app.post('/admin')
-async def admin_form(willCome: Annotated[bool, Form()], comeTime: Annotated[str, Form()]):
+async def admin_form(willCome: str = Form(None), comeTime: str = Form(None)):
     global KNOWN, WILL_COME, COME_TIME, LAST_UPDATE
-    WILL_COME = willCome
-    COME_TIME = comeTime
+    WILL_COME = willCome or False
+    COME_TIME = comeTime or None
     LAST_UPDATE = datetime.now()
     return RedirectResponse('/admin', status_code=status.HTTP_302_FOUND)
 
