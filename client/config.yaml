@@ -1,6 +1,7 @@
 CHECK_INTERVAL: 5
 CHECK_TIMEOUT: 5
 API_URL: "http://localhost:8080/getcome"
+FONT_SIZE: 20
 
 UNAVAILABLE_MESSAGE: "Не могу достучаться до интернета\nНе знаю, придёт ли сегодня Тамерлан :("
 UNKNOWN_MESSAGE: "Тамерлан ещё сам не понял, придёт ли он сегодня"

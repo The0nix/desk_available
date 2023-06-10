@@ -51,7 +51,7 @@ def main(config_file):
         compound='center',
         bg='black',
         fg='white',
-        font=("Courier", 44)
+        font=("Courier", config['FONT_SIZE'])
     )
     text_label.place(relx=.5, rely=.5,anchor=tkinter.CENTER)
 
